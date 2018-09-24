@@ -28,9 +28,11 @@ class IndecisionApp extends React.Component {
     handlePick = () => {
         const randomNum = Math.floor(Math.random() * this.state.options.length);
         const option = this.state.options[randomNum];
+        console.log("option is: " + option);
         this.setState(() => ({
             selectedOption: option
         }));
+        console.log("selected option is: " + this.state.selectedOption);
     }
 
     handleAddOption = (option) => {
